@@ -5,15 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Armz Dealer – Coming Soon</title>
   <style>
-    * {
-      box-sizing: border-box;
-    }
-
     body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #111;
+      font-family: Arial, sans-serif;
+      background: #111;
       color: #fff;
       text-align: center;
       padding: 40px 20px;
@@ -22,19 +16,44 @@
     img.logo {
       max-width: 300px;
       width: 100%;
-      margin: 0 auto 30px;
-      display: block;
+      margin-bottom: 30px;
     }
 
     h1 {
-      font-size: 3rem;
+      font-size: 2.5em;
       margin-bottom: 10px;
     }
 
     h2 {
       color: #ffc107;
-      font-size: 1.8rem;
       margin-bottom: 30px;
+    }
+
+    form {
+      background: #222;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    input[type="text"],
+    input[type="email"] {
+      width: 90%;
+      padding: 12px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 6px;
+    }
+
+    input[type="submit"] {
+      background: #ffc107;
+      color: #000;
+      border: none;
+      padding: 12px 30px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
     }
 
     .features {
@@ -48,25 +67,16 @@
       margin: 10px 0;
     }
 
-    iframe {
-      width: 100%;
-      max-width: 700px;
-      height: 650px;
-      border: none;
-      margin-top: 30px;
-    }
-
     .coming-soon {
-      margin-top: 40px;
       font-size: 1.5rem;
-      font-weight: bold;
       color: #ff4444;
+      margin-top: 40px;
     }
 
     .footer {
       margin-top: 60px;
-      font-size: 0.9rem;
-      color: #bbb;
+      font-size: 0.9em;
+      color: #aaa;
     }
 
     a {
@@ -86,19 +96,11 @@
       .features {
         font-size: 1rem;
       }
-
-      iframe {
-        height: 500px;
-      }
     }
 
     @media (max-width: 480px) {
       body {
         padding: 30px 10px;
-      }
-
-      iframe {
-        height: 450px;
       }
 
       .coming-soon {
@@ -109,8 +111,7 @@
 </head>
 <body>
 
- <H1><img src="logo.png" alt="Armz Dealer Logo" class="logo" /></H1>
-
+  <h1><img src="logo.png" alt="Armz Dealer Logo" class="logo" /></h1>
   <h2>Custom 80% Glock Frames – Coming Soon</h2>
 
   <div class="features">
@@ -121,16 +122,21 @@
   </div>
 
   <p>Want early access and launch updates?</p>
-  <p><strong>Subscribe below and we’ll notify you directly!</strong></p>
-
-  <!-- Replace with your actual Google Form embed link -->
-  <iframe src="YOUR_GOOGLE_FORM_EMBED_LINK_HERE" allowfullscreen></iframe>
+  <form action="https://formsubmit.co/fox27.tb@gmail.com" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required />
+    <input type="email" name="email" placeholder="Your Email" required />
+    
+    <input type="hidden" name="_captcha" value="false" />
+    <input type="hidden" name="_next" value="https://github.com/your-username/armz-dealer-landing/thank-you.html" />
+    
+    <input type="submit" value="Subscribe Now" />
+  </form>
 
   <div class="coming-soon">🚧 Under Construction – Launching Soon!</div>
 
   <div class="footer">
     &copy; 2025 Armz Dealer – All Rights Reserved<br />
-    Contact: <a href="mailto:fox27.tb@gmail.com">fox27.tb@gmail.com</a>
+
   </div>
 
 </body>
